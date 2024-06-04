@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prdn</title>
+    <style>
+        body {
+            background-image: url('https://previews.123rf.com/images/zoliky/zoliky1404/zoliky140400019/27919140-arad-rumania-30-de-septiembre-del-patr%C3%B3n-de-2012-hello-kitty-impresa-en-tiro-caja-de-cart%C3%B3n.jpg');
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .message-box {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 90%;
+            margin: 0 auto;
+        }
+        h1 {
+            color: purple;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        button {
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 1em;
+            color: white;
+            background-color: purple;
+            font-weight: bold;
+            position: relative;
+        }
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            button {
+                padding: 15px 30px;
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="message-box">
+        <h1>¿Mi Dairita hermosa, preciosa, amor de mi corazón y de mi alma, ¿Me perdonas??</h1>
+    </div>
+    <button id="btnSi">Sí</button>
+    <button id="btnNo">No</button>
+
+    <script>
+        document.getElementById('btnNo').addEventListener('click', function() {
+            let btnSi = document.getElementById('btnSi');
+            let currentSize = parseFloat(window.getComputedStyle(btnSi).fontSize);
+            btnSi.style.fontSize = (currentSize + 2) + 'px';
+        });
+
+        document.getElementById('btnSi').addEventListener('click', function() {
+            document.body.innerHTML = `
+                <div class="message-box">
+                    <p style="color: purple; font-size: 24px;">Ay que linda yo sabía que sí, hay que besarnos y abrazarnos así bien descontroladamente y luego por un elote beso</p>
+                    <img src="https://i.pinimg.com/564x/1a/86/c9/1a86c992de66908d1e08f5f69695139e.jpg" alt="Imagen de agradecimiento" style="width: 80%; max-width: 300px; height: auto;">
+                </div>`;
+        });
+    </script>
+</body>
+</html>
